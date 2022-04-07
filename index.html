@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="page">
+        <!-- Main Content -->
+        <section class="container">
+            <nav class="navbar">
+                <div class="navbar_content">
+                    <img src="./images/lego.png" alt="logo">
+                    <ul>
+                        <li> <a href="">Exclusivos</a> </li>
+                        <li> <a href="">Nuevos</a> </li>
+                        <li> <a href="">Gift Cards</a></li>
+                        <li> <a href="">Find a Store</a> </li>
+                    </ul>
+                </div>
+            </nav>
+            
+
+
+            <section class="main-content">
+                <p>Diseña tu</p>
+                <h1>Súper Héroe</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, repellat? Facilis laboriosam praesentium expedita accusamus earum commodi, maiores debitis accusantium?</p>
+            </section>
+
+            <section class="side-content">
+                <p>Superman</p>
+                <div></div>
+                <img src="./images/super-man.png" alt="superman">
+                
+            </section>
+
+            <section class="footer">
+                <div id="button1">
+                    <img src="./images/spiderman.png" alt="spiderman">
+                </div>
+                <div id="button2">
+                    <img src="./images/robin.png" alt="robin"> 
+                </div>
+                <div id="button3">
+                    <img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman">
+                </div>
+            </section>
+
+        </section>
+        <!-- loader -->
+        <section class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <!-- modal -->
+        <section class="modal hidden">
+            <div class="modal__content">
+                <img class="modal__content--close" src="https://img.icons8.com/external-doodle-bomsymbols-/91/000000/external-close-doodle-web-design-device-set-2-doodle-bomsymbols-.png"/>
+
+                <div class=" modal__content--slider">
+                    <input class="iput" type="radio" name="slider-1" id="radio-1" checked>
+                    <input class="iput" type="radio" name="slider-1" id="radio-2" >
+                    <input class="iput" type="radio" name="slider-1" id="radio-3" >
+
+                    <div class="cards">
+                        <label for="radio-1" id="card-1" class="card">
+                            <img class="spide" src="./images/slider/spide.png" alt="">
+                        </label>
+
+                        <label for="radio-2" id="card-2" class="card">
+                            <img class="spide" src="./images/slider/spide_2.png" alt="">
+                        </label>
+
+                        <label for="radio-3" id="card-3" class="card">
+                            <img class="spide" src="./images/slider/spide_3.png" alt="">
+                        </label>
+                    </div>
+                </div>   
+            </div> 
+        </section>
+
+
+        <section class="modal_batman hidden">
+            <div class="modal_batman-content">
+                <img class="modal_batman--close" src="https://img.icons8.com/external-doodle-bomsymbols-/91/000000/external-close-doodle-web-design-device-set-2-doodle-bomsymbols-.png"/>
+
+                <div class=" modal_batman-content--slider">
+                    <input class="iput" type="radio" name="slider-2" id="radio-1-batman" checked>
+                    <input class="iput" type="radio" name="slider-2" id="radio-2-batman" >
+                    <input class="iput" type="radio" name="slider-2" id="radio-3-batman" >
+
+                    <div class="cards_batman">
+                        <label for="radio-1-batman" id="card-1-batman" class="card_batman">
+                            <img class="bat" src="./images/slider/robin/robi.png" alt="">
+                        </label>
+
+                        <label for="radio-2-batman" id="card-2-batman" class="card_batman">
+                            <img class="bat" src="./images/slider/robin/robin.png" alt="">
+                        </label>
+
+                        <label for="radio-3-batman" id="card-3-batman" class="card_batman">
+                            <img class="bat" src="./images/slider/robin/robinn.jpg" alt="">
+                        </label>
+                    </div>
+                </div>   
+            </div>
+            
+        </section>
+    </main>
+</body>
+<script>
+    const modal = document.querySelector('.modal')
+    const button1 = document.querySelector('#button1')    
+    const closeButton = document.querySelector('.modal__content--close')
+    
+    button1.addEventListener('click', () => {
+        modal.classList.remove('hidden')
+        modal.classList.add('visible')
+    }) 
+
+    closeButton.addEventListener('click', () => {
+        
+        modal.classList.add('hidden')
+        modal.classList.remove('visible')
+    })
+</script>
+
+<script>
+
+    const modal_batman = document.querySelector('.modal_batman')
+    const button2 = document.querySelector('#button2')
+    const closeBatman = document.querySelector('.modal_batman--close')
+
+    button2.addEventListener('click', () => {
+        
+        modal_batman.classList.remove('hidden')
+        modal_batman.classList.add('visible')
+    })
+
+    closeBatman.addEventListener('click', () => {
+        modal_batman.classList.add('hidden')
+        modal_batman.classList.remove('visible')
+    })
+</script>
+
+</html>
